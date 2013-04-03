@@ -12,9 +12,9 @@ void set_pixel(GdkPixbuf *pixbuf, int x, int y, guchar red, guchar green, guchar
     guchar *pixels, *p;
 
     pixels = gdk_pixbuf_get_pixels(pixbuf);
-    p = pixels + y * rowstride *  + x * n_channels;
+    p = pixels + y * rowstride  + x * n_channels;
 
-    fprintf(stderr, "%p, %d, %d, %d, %d\n", p, p[0], p[1], p[2], p[3]);
+/*    fprintf(stderr, "%p, %d, %d, %d, %d\n", p, p[0], p[1], p[2], p[3]);*/
 
     p[0] = red;
     p[1] = green;
